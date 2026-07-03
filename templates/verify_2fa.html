@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Two-Factor Verification</h2>
+    <p style="font-size:13px; color:#555;">Enter the 6-digit code from your authenticator app, or skip since 2FA is optional.</p>
+    <form method="POST">
+        <input type="text" name="code" placeholder="6-digit code" maxlength="6">
+        <button type="submit">Verify</button>
+    </form>
+    <form method="POST">
+        <input type="hidden" name="skip" value="1">
+        <button type="submit" class="secondary">Skip 2FA</button>
+    </form>
+{% endblock %}
